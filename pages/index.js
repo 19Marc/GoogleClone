@@ -1,5 +1,7 @@
 import Head from 'next/head'
 
+
+// Start Sideproject Googleclone
 export default function Home() {
   return (
     <div className="container">

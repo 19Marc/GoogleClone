@@ -1,5 +1,8 @@
 import Head from 'next/head'
 
+import Header from '../components/header/header'
+import Searchbar from '../components/searchbar/searchbar'
+import Footer from '../components/footer/footer'
 
 // Start Sideproject Googleclone
 export default function Home() {
@@ -11,13 +14,24 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">GoogleClone</a>
-        </h1>
+        <Header>
+          <h1 className="title">
+            Welcome to <a href="https://nextjs.org">GoogleClone</a>
+          </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+          <p className="description">
+            We will solve your Problem
+          </p>
+        </Header>
+
+        <Searchbar>
+          <p className="searchbar">searchbar</p>
+          <input type="text" placeholder="Search.."></input>
+        </Searchbar>
+
+        <Footer>
+          <p className="footer">Text</p>
+        </Footer>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">

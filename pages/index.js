@@ -30,7 +30,7 @@ export default function Home() {
         </Searchbar>
       </main>
         <Footer>
-          <p className="footer">Footer</p>
+          <p className="footer">Footer Text Placeholder</p>
         </Footer>
 
     </div>

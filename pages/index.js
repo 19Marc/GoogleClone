@@ -29,10 +29,11 @@ export default function Home() {
           <input type="text" placeholder="Search.."></input>
         </Searchbar>
       </main>
+      <footer>
         <Footer>
           <p className="footer">Footer Text Placeholder</p>
         </Footer>
-
+      </footer>
     </div>
   )
 }

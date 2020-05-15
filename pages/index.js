@@ -13,27 +13,31 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Header>
-          <h1 className="title">
-            Welcome to <a href="https://nextjs.org">GoogleClone</a>
-          </h1>
+      <Header>
+        <h1 className="title">
+          Welcome to <a href="https://nextjs.org">GoogleClone</a>
+        </h1>
 
-          <p className="description">
-            We will solve your Problem
-          </p>
-        </Header>
+        <p className="description">
+          We will solve your Problem
+        </p>
+      </Header>
 
-        <Searchbar>
-          <p className="searchbar">searchbar</p>
-          <input type="text" placeholder="Search.."></input>
-        </Searchbar>
-      </main>
-      <footer>
-        <Footer>
-          <p className="footer">Footer Text Placeholder</p>
-        </Footer>
-      </footer>
+      <Searchbar>
+        <p className="searchbar">searchbar</p>
+        <input type="text" placeholder="Search.."></input>
+      </Searchbar>
+
+      <Footer>
+        <p className="footer">Footer Text Placeholder</p>
+      </Footer>
+    
     </div>
   )
 }
+
+
+
+
+// CSS VARIABLES (POSTCSS / TAILWIND ODER STYLE COMPONENTS
+// GOOGLE SEARCH 

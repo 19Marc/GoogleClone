@@ -8,11 +8,13 @@ import Footer from '../components/footer/footer'
 export default function Home() {
   return (
     <div className="container">
+      
       <Head>
         <title>GoogleClone</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+    <main>
       <Header>
         <h1 className="title">
           Welcome to <a href="https://nextjs.org">GoogleClone</a>
@@ -27,6 +29,8 @@ export default function Home() {
         <p className="searchbar">searchbar</p>
         <input type="text" placeholder="Search.."></input>
       </Searchbar>
+
+    </main>
 
       <Footer>
         <p className="footer">Footer Text Placeholder</p>

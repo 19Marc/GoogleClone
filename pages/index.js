@@ -1,42 +1,37 @@
+// import { ThemeProvider } from 'styled-components' theming
+
 import Head from 'next/head'
 
-import Header from '../components/header/header'
-import Searchbar from '../components/searchbar/searchbar'
-import Footer from '../components/footer/footer'
+// import * as theme from 'config/theme'
+import LayoutComponent from '../components/layoutComponent/layout'
+import HomeComponent from '../components/Home/homeLayout'
+import HeaderComponent from '../components/headerComponent/headerLayout'
+import FooterComponent from '../components/footerComponent/footerLayout'
+import SearchbarComponent from '../components/searchbarComponent/searchbarLayout'
 
-// Start Sideproject Googleclone
+
+// Start Sideproject Googleclonex
+
 export default function Home() {
   return (
-    <div className="container">
-      
+    <div> 
+
       <Head>
-        <title>GoogleClone</title>
-        <link rel="icon" href="/favicon.ico" />
+      <title>GoogleClone</title>
+      <link rel="icon" href="/favicon.ico" />
       </Head>
 
-    <main>
-      <Header>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">GoogleClone</a>
-        </h1>
+      <LayoutComponent>
+        <HomeComponent>
+          <HeaderComponent />
 
-        <p className="description">
-          We will solve your Problem
-        </p>
-      </Header>
+          <SearchbarComponent />
 
-      <Searchbar>
-        <p className="searchbar">searchbar</p>
-        <input type="text" placeholder="Search.."></input>
-      </Searchbar>
+          <FooterComponent /> 
 
-    </main>
-
-      <Footer>
-        <p className="footer">Footer Text Placeholder</p>
-      </Footer>
-    
-    </div>
+        </HomeComponent>
+      </LayoutComponent>
+    </div> 
   )
 }
 

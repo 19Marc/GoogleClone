@@ -5,15 +5,10 @@
   --main-lh: 1.6;
 }
 
-.headerContainer {
---header-container-bg-color: #0000ff;
---header-container-color: #fff;
---header-container-width: 100%;
---header-container-height: 150px;
-}
-
 html,
 body {
+  width: 100%;
+  Height: 100%;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,

@@ -34,9 +34,3 @@ export default function Home() {
     </div> 
   )
 }
-
-
-
-
-// CSS VARIABLES (POSTCSS / TAILWIND ODER STYLE COMPONENTS
-// GOOGLE SEARCH 

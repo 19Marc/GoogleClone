@@ -68,14 +68,14 @@ export const SearchButton = styled.div `
   @media (max-width: 575.98px) {
     justify-content: center;
     align-items: center;
-    font-size: ${props => props.theme.fontSize.fsSmall0};
+    font-size: ${props => props.theme.fontSize.fsXs1};
     margin-left: .1rem;
   }
 
   @media (min-width: 576px) {
     justify-content: center;
     align-items: center;
-    font-size: ${ props => props.theme.fontSize.fsSmall0};
+    font-size: ${ props => props.theme.fontSize.fsfsXs1};
     margin-left: .1rem;
   }
 

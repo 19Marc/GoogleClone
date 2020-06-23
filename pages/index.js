@@ -1,4 +1,6 @@
-// import { ThemeProvider } from 'styled-components' theming
+import { ThemeProvider } from 'styled-components';
+import GlobalStyles from '../config/globalStyles'
+import theme from '../config/theme'
 
 import Head from 'next/head'
 
@@ -14,23 +16,25 @@ import SearchbarComponent from '../components/searchbarComponent/searchbarLayout
 
 export default function Home() {
   return (
-    <div> 
+    <ThemeProvider theme={theme}>
+      <div> 
+        <Head>
+        <title>GoogleClone</title>
+        <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-      <Head>
-      <title>GoogleClone</title>
-      <link rel="icon" href="/favicon.ico" />
-      </Head>
+        <LayoutComponent>
+        <GlobalStyles />
+          <HomeComponent>
+            <HeaderComponent />
 
-      <LayoutComponent>
-        <HomeComponent>
-          <HeaderComponent />
+            <SearchbarComponent />
 
-          <SearchbarComponent />
+            <FooterComponent /> 
 
-          <FooterComponent /> 
-
-        </HomeComponent>
-      </LayoutComponent>
-    </div> 
+          </HomeComponent>
+        </LayoutComponent>
+      </div> 
+    </ThemeProvider>
   )
 }

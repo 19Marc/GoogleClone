@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --main-color: #fff;
   --main-bg-color: #000000;
   --main-fs: 18px;
@@ -34,4 +34,4 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
-}
+} */

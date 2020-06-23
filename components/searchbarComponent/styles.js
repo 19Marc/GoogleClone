@@ -47,12 +47,12 @@ export const GoogleImage = styled.p`
 color: #999;
 margin: 0 100px 0 0;
 padding: 0;
-font-size: 12px;
+font-size: ${props => props.theme.fontSize.fsSmall0};
 `
 
 export const SafedHours = styled.p`
 color: #999;
 margin: 0 123px 0 0;
 padding: 0;
-font-size: 12px;
+font-size: ${props => props.theme.fontSize.fsSmall0};
 `

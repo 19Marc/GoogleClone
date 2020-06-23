@@ -7,8 +7,10 @@ export const HeaderWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: white;
+  background-color: ${ props => props.theme.root.MainBackgroundColor };
+  color: ${ props => props.theme.fontColor.white };
+
+  color: blue;
 `
 
 export const Headline = styled.h1` 
@@ -17,19 +19,19 @@ export const Headline = styled.h1`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  color: white; 
-  font-size: 42px;
+  font-size: ${ props => props.theme.fontSize.fsBig }; ;
   line-height: 14px;
 
   p {
       display: flex;
       margin-right: 1.5%;
+      color: ${ props => props.theme.fontColor.white}; 
     }
 
   a {
     display: flex;
     justify-content: center;
-    color: blue;
+    color: ${ props => props.theme.fontColor.blue};
     text-decoration: none;
 
   }

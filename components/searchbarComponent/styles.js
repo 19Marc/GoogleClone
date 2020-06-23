@@ -28,6 +28,7 @@ export const SearchbarInput = styled.input`
   display: flex;
   justify-content: center;
   width: 100%;
+  height: 1.3rem;
   border: 1px solid #666;
   border-radius: 3px;
   /* margin: 30px 0 0; */
@@ -40,10 +41,11 @@ export const SearchButton = styled.div `
   display: flex;
   justify-content: center;
   background-color: white;
-  width: 19%;
-  height: 1.275rem;
+  width: 20%;
+  height: 1.3rem;
   border: 1px solid #666;
   border-radius: 3px;
+  padding: 3px;
   margin-left: 1rem;
 `
 

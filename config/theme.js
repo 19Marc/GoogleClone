@@ -8,6 +8,8 @@ const theme = {
     boxSizing: 'border-box',
   },
   fontSize: {
+    fsXs0: '.25rem',
+    fsXs1: '.5rem',
     fsSmall0: '.75rem',
     fsSmall1: '1rem',
     fsMiddle0: '1.25rem',

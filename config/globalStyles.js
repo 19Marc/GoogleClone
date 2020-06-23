@@ -5,6 +5,8 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     font-size: ${props => props.theme.root.rootFontSize};
+    box-sizing: ${props => props.theme.root.boxSizing};
+    margin: 0;
   }
 
   body {

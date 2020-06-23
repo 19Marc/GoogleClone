@@ -1,4 +1,4 @@
-import { SearchbarWrapper, SearchbarInput, InputWrapper, SearchButton, TextWrapper, GoogleImage, SafedHours } from './styles'
+import { SearchbarWrapper, SearchbarInput, SearchWrapper, InputWrapper, SearchButton, TextWrapper, GoogleImage, SafedHours } from './styles'
 
 export default function SearchbarComponent({
   type = "text",
@@ -6,14 +6,16 @@ export default function SearchbarComponent({
 }) {
   return(
     <SearchbarWrapper>
-      <InputWrapper>
-        <SearchbarInput type={type} placeholder={placeholder}/>
+      <SearchWrapper>
+        <InputWrapper>
+          <SearchbarInput type={type} placeholder={placeholder}/>
+          <TextWrapper>
+            <GoogleImage>Google</GoogleImage>
+            <SafedHours>xxx Watt hours safed</SafedHours>
+          </TextWrapper>
+        </InputWrapper>
         <SearchButton>Search</SearchButton>
-      </InputWrapper>
-      <TextWrapper>
-        <GoogleImage>Google</GoogleImage>
-        <SafedHours>xxx Watt hours safed</SafedHours>
-      </TextWrapper>
+      </SearchWrapper>
     </SearchbarWrapper>
   )
 }

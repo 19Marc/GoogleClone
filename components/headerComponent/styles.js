@@ -9,8 +9,6 @@ export const HeaderWrapper = styled.div`
   align-items: center;
   background-color: ${ props => props.theme.root.MainBackgroundColor };
   color: ${ props => props.theme.fontColor.white };
-
-  color: blue;
 `
 
 export const Headline = styled.h1` 
@@ -20,11 +18,11 @@ export const Headline = styled.h1`
   justify-content: center;
   align-items: center;
   font-size: ${ props => props.theme.fontSize.fsBig }; ;
-  line-height: 14px;
+  line-height: ${ props => props.theme.lineHeight.lhSmall0};
 
   p {
       display: flex;
-      margin-right: 1.5%;
+      margin-right: 1rem;
       color: ${ props => props.theme.fontColor.white}; 
     }
 
@@ -41,9 +39,10 @@ export const Description = styled.p`
   display: flex;
   justify-content: center;
   width: 100%;
-  color: white;
-  font-size: 32px;
-  line-height: 14px;
+  color: ${ props => props.theme.fontColor.white};
+  font-size: ${ props => props.theme.fontSize.fsMiddle };
+  line-height: ${ props => props.theme.lineHeight.lhSmall0};
+  margin-bottom: 4rem;
 `
 
 // const HeaderContainer = ({ children, className}) => (

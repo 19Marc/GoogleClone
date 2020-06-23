@@ -5,6 +5,7 @@ const theme = {
     rootFontSize: '100%',
     mainFontSize: '18px',
     mainLineHeight: '1.6',
+    boxSizing: 'border-box',
   },
   fontSize: {
     fsSmall0: '.75rem',
@@ -17,13 +18,17 @@ const theme = {
     blue: 'blue',
   },
   lineHeight: {
-    lhSmall: '.75rem',
+    lhSmall0: '.1rem',
+    lhSmall1: '.75rem',
     lhMiddle: '1.75rem',
     lhBig: '3rem',
   },
   color: {
     black: [
       '#000'
+    ],
+    gray: [
+      '#999',
     ]
   }
 };

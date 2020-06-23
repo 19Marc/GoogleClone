@@ -33,23 +33,23 @@ export const SearchbarInput = styled.input`
   border: 1px solid #666;
   border-radius: 3px;
   padding: 3px;
-  line-height: ${ props => props.theme.lineHeight.lhSmall0};
+  line-height: ${ props => props.theme.lineHeight.lhMiddle0};
   outline: none;
 
   @media (max-width: 575.98px) {
-    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+    line-height: ${ props => props.theme.lineHeight.lhMiddle0};
   }
 
   @media (min-width: 576px) {
-    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+    line-height: ${ props => props.theme.lineHeight.lhMiddle0};
   }
 
   @media (min-width: 768px) {
-    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+    line-height: ${ props => props.theme.lineHeight.lhMiddle0};
   }
 
   @media (min-width: 1200px) {
-    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+    line-height: ${ props => props.theme.lineHeight.lhMiddle0};
   }
 `
 

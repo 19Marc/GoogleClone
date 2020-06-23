@@ -21,7 +21,8 @@ const theme = {
   lineHeight: {
     lhSmall0: '.1rem',
     lhSmall1: '.75rem',
-    lhMiddle: '1.75rem',
+    lhMiddle0: '1rem',
+    lhMiddle1: '1.75rem',
     lhBig: '3rem',
   },
   color: {

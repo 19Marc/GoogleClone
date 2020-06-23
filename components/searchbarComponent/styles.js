@@ -122,6 +122,7 @@ export const GoogleImage = styled.p`
 
   @media (min-width: 1200px) {
     font-size: ${ props => props.theme.fontSize.fsSmall1};
+  }
 `
 
 export const SafedHours = styled.p`
@@ -129,4 +130,19 @@ export const SafedHours = styled.p`
   margin: 0;
   padding: 0;
   font-size: ${props => props.theme.fontSize.fsSmall0};
+
+  @media (max-width: 575.98px) {
+    font-size: ${props => props.theme.fontSize.fsXs1};
+  }
+
+  @media (min-width: 576px) {
+    font-size: ${props => props.theme.fontSize.fsXs1};
+  }
+
+  @media (min-width: 768px) {
+    font-size: ${ props => props.theme.fontSize.fsSmall1}; 
+  }
+
+  @media (min-width: 1200px) {
+    font-size: ${ props => props.theme.fontSize.fsSmall1};
 `

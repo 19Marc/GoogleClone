@@ -51,11 +51,15 @@ export const SearchButton = styled.div `
   font-size: ${ props => props.theme.fontSize.fsMiddle0};
 
   @media (max-width: 575.98px) {
+    justify-content: center;
+    align-items: center;
     font-size: ${props => props.theme.fontSize.fsSmall0};
     margin-left: .1rem;
   }
 
   @media (min-width: 576px) {
+    justify-content: center;
+    align-items: center;
     font-size: ${ props => props.theme.fontSize.fsSmall0};
     margin-left: .1rem;
   }

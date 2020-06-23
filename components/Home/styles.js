@@ -6,7 +6,7 @@ export const HomeWrapper = styled.div`
   background-color: black;
   margin-left: auto;
   margin-right: auto;
-  margin-top: auto;
+  margin-top: 50%;
   margin-bottom: auto;
 `
 

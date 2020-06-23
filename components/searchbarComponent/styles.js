@@ -47,26 +47,51 @@ export const SearchButton = styled.div `
   border-radius: 3px;
   padding: 3px;
   margin-left: 1rem;
+  font-size: ${ props => props.theme.fontSize.fsMiddle0};
+
+  @media (max-width: 575.98px) {
+    font-size: ${props => props.theme.fontSize.fsSmall0};
+    margin-left: .1rem;
+  }
+
+  @media (min-width: 576px) {
+    font-size: ${ props => props.theme.fontSize.fsSmall0};
+    margin-left: .1rem;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: ${ props => props.theme.fontSize.fsSmall1}; 
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: ${ props => props.theme.fontSize.fsSmall1}; 
+  }
 `
 
 export const TextWrapper = styled.div`
-display: flex;
-flex-direction: row;
-justify-content : space-between;
-align-items: flex-start;
-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content : space-between;
+  align-items: flex-start;
+  width: 100%;
 `
 
 export const GoogleImage = styled.p`
-color: ${props => props.theme.color.gray[0]};
-margin: 0;
-padding: 0;
-font-size: ${props => props.theme.fontSize.fsSmall0};
+  color: ${props => props.theme.color.gray[0]};
+  margin: 0;
+  padding: 0;
+  font-size: ${props => props.theme.fontSize.fsSmall0};
 `
 
 export const SafedHours = styled.p`
-color: ${props => props.theme.color.gray[0]};
-margin: 0;
-padding: 0;
-font-size: ${props => props.theme.fontSize.fsSmall0};
+  color: ${props => props.theme.color.gray[0]};
+  margin: 0;
+  padding: 0;
+  font-size: ${props => props.theme.fontSize.fsSmall0};
 `

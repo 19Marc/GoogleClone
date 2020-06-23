@@ -39,18 +39,29 @@ export const Headline = styled.h1`
   line-height: ${ props => props.theme.lineHeight.lhSmall0};
 
   @media (max-width: 575.98px) {
-      height: 1rem;
-      font-size: ${ props => props.theme.fontSize.fsMiddle0 };
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    font-size: ${ props => props.theme.fontSize.fsMiddle0 };
   }
 
   @media (min-width: 576px) {
-      height: 1rem;
-      font-size: ${ props => props.theme.fontSize.fsMiddle0 };
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 1.5rem;
+    font-size: ${ props => props.theme.fontSize.fsMiddle0 };
   }
 
   @media (min-width: 768px) {
-      height: 1rem;
-      font-size: ${ props => props.theme.fontSize.fsMiddle1 };
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 1rem;
+    font-size: ${ props => props.theme.fontSize.fsMiddle1 };
   }
 
   @media (min-width: 1200px) {

@@ -117,11 +117,11 @@ export const GoogleImage = styled.p`
   }
 
   @media (min-width: 768px) {
-    font-size: ${ props => props.theme.fontSize.fsSmall1}; 
+    font-size: ${ props => props.theme.fontSize.fsSmall0}; 
   }
 
   @media (min-width: 1200px) {
-    font-size: ${ props => props.theme.fontSize.fsSmall1};
+    font-size: ${ props => props.theme.fontSize.fsSmall0};
   }
 `
 
@@ -140,9 +140,9 @@ export const SafedHours = styled.p`
   }
 
   @media (min-width: 768px) {
-    font-size: ${ props => props.theme.fontSize.fsSmall1}; 
+    font-size: ${ props => props.theme.fontSize.fsSmall0}; 
   }
 
   @media (min-width: 1200px) {
-    font-size: ${ props => props.theme.fontSize.fsSmall1};
+    font-size: ${ props => props.theme.fontSize.fsSmall0};
 `

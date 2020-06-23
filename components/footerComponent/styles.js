@@ -3,11 +3,10 @@ import styled from 'styled-components'
 export const FooterWrapper = styled.div`
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  height: 7.5rem;
+  height: 5.5rem;
   background-color: ${props => props.theme.root.mainBackgroundColor};
   color: ${ props => props.theme.fontColor.white };
 
@@ -15,19 +14,23 @@ export const FooterWrapper = styled.div`
     height: 3.5rem;
     padding: 0;
     margin-top: .75rem;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 576px) {
     height: 3.5rem;
     margin-top: .75rem;
+    flex-wrap: wrap;
   }
 
   @media (min-width: 768px) {
     height: 5rem;
+    flex-wrap: nowrap
   }
 
   @media (min-width: 1200px) {
     height: 7.5rem; 
+    flex-wrap: nowrap
   }
 `
 
@@ -37,6 +40,7 @@ export const FooterLinks = styled.a `
   font-size: ${ props => props.theme.fontSize.fsSmall0 };
   padding: 0 8px;
   text-decoration: underline;
+  text-align: center;
 
  @media (max-width: 575.98px) {
     font-size: ${props => props.theme.fontSize.fsSmall0};

@@ -5,6 +5,8 @@ const GlobalStyles = createGlobalStyle`
 
   * {
     box-sizing: ${props => props.theme.root.boxSizing};
+    margin: 0;
+    padding: 0;
   }
 
   html {

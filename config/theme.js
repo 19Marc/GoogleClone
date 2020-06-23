@@ -10,7 +10,8 @@ const theme = {
   fontSize: {
     fsSmall0: '.75rem',
     fsSmall1: '1rem',
-    fsMiddle: '1.75rem',
+    fsMiddle0: '1.25rem',
+    fsMiddle1: '1.75rem',
     fsBig: '3rem', 
   },
   fontColor: {

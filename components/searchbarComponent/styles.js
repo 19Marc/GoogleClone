@@ -27,6 +27,7 @@ export const InputWrapper = styled.div`
 export const SearchbarInput = styled.input`
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: 1.3rem;
   border: 1px solid #666;

@@ -11,11 +11,11 @@ export const FooterWrapper = styled.div`
   color: ${ props => props.theme.fontColor.white };
 
   @media (max-width: 575.98px) {
-    height: 5rem;
+    height: 3.5rem;
   }
 
   @media (min-width: 576px) {
-    height: 5rem;
+    height: 3.5rem;
   }
 
   @media (min-width: 768px) {

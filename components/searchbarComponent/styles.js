@@ -32,10 +32,25 @@ export const SearchbarInput = styled.input`
   height: 1.3rem;
   border: 1px solid #666;
   border-radius: 3px;
-  /* margin: 30px 0 0; */
   padding: 3px;
   line-height: ${ props => props.theme.lineHeight.lhSmall0};
   outline: none;
+
+  @media (max-width: 575.98px) {
+    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+  }
+
+  @media (min-width: 576px) {
+    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+  }
+
+  @media (min-width: 768px) {
+    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+  }
+
+  @media (min-width: 1200px) {
+    line-height: ${ props => props.theme.lineHeight.lhSmall0};
+  }
 `
 
 export const SearchButton = styled.div `

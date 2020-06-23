@@ -106,14 +106,14 @@ export const GoogleImage = styled.p`
   color: ${props => props.theme.color.gray[0]};
   margin: 0;
   padding: 0;
-  font-size: ${props => props.theme.fontSize.fsXs1};
+  font-size: ${props => props.theme.fontSize.Small0};
 
   @media (max-width: 575.98px) {
     font-size: ${props => props.theme.fontSize.fsXs1};
   }
 
   @media (min-width: 576px) {
-    font-size: ${ props => props.theme.fontSize.fsSmall0};
+    font-size: ${props => props.theme.fontSize.fsXs1};
   }
 
   @media (min-width: 768px) {

@@ -15,7 +15,7 @@ export const SearchWrapper = styled.div`
   margin: 0;
 `
 
-export const InputWrapper = styled.div`
+export const InputWrapper = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,4 +145,9 @@ export const SafedHours = styled.p`
 
   @media (min-width: 1200px) {
     font-size: ${ props => props.theme.fontSize.fsSmall0};
+  }
 `
+
+/**
+ * https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=google
+ */

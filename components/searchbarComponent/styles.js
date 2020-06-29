@@ -148,6 +148,14 @@ export const SafedHours = styled.p`
   }
 `
 
+export const SearchResult = styled.ul `
+  background-color: white;
+`
+
+export const SearchList = styled.li `
+  color: black;
+`
+
 /**
  * https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=google
  */

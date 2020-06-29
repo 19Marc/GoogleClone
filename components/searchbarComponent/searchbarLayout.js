@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import { getServerSideProps } from 'next'
 
-import { SearchbarWrapper, SearchbarInput, SearchWrapper, InputWrapper, SearchButton, TextWrapper, GoogleImage, SafedHours } from './styles'
+import { SearchbarWrapper, SearchbarInput, SearchWrapper, InputWrapper, SearchButton, TextWrapper, GoogleImage, SafedHours, SearchList, SearchResult } from './styles'
 
 
 
@@ -23,6 +23,8 @@ export default function SearchbarComponent() {
     .then(data => {
         setData(data)
         console.log(data)
+        // console.log("cash", data.items.map(id => id.cacheId))
+        // console.log("searchimage: ", data.items.map( svg => svg.pagemap.cse_thumbnail));
     })
     .catch(error => console.error(error))  
   };
@@ -39,13 +41,16 @@ export default function SearchbarComponent() {
         </InputWrapper>
         <SearchButton>Search</SearchButton>
       </SearchWrapper>
-      <ul>
+      <SearchResult>
         {typeof data.items !== "undefined" && data.items.map(item => (
-          <li key={item.id}>
+          <SearchList key={item.cacheId}>
             <p>{item.title}</p>
-          </li>
+            <a href={item.link}>{item.link}</a>
+            <p>{item.snippet}</p>
+            {/* <img href={item.svg.pagemap.cse_thumbnail}></img> */}
+          </SearchList>
         ))}
-      </ul>
+      </SearchResult>
     </SearchbarWrapper>
   )
 };

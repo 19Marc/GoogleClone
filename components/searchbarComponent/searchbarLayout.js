@@ -8,44 +8,7 @@ import { SearchbarWrapper, SearchbarInput, SearchWrapper, InputWrapper, SearchBu
 
 // const ApiKey = "AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&";
 // const GoogleKey = "003843309577069876842:stoc1spwaxe&q";
-// query = "";
-
-// handleSubmit = (event) => {
-//   event.preventDefault()
-// }
-
-// handleOnChange = (event) => {
-//   event.preventDefault()
-//   console.log(event)
-//   console.log(event.target.name)
-//   console.log(event.target.value)
-// }
-
-  // const handleOnChange = (event) => {
-  //   event.preventDefault()
-  //   setFormData({ ...formValue, [event.target.name]: event.target.value });
-  // };
-
-
-
-  // useEffect(() => {
-  //   async function  fetchRepos() {
-  //     const  response  = await fetch(`https://api.github.com/users/${userName}/repos`)
-  //     const  repos  = await response.json()
-
-  //     // our setRepos call tells React to re-render the component.
-  //     // which then calls our useEffect hook again, so on and so forth
-  //     setRepos()
-  //   } 
-  //   fetchRepos().catch(error  =>  console.error(error))
-  //   // this is because we are not passing an array of 
-  //   // dependencies as the second argument to useEffect
-  // })
-
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   setUserName(e.target.username.value)
-  // };
+// query = ""
 
 export default function SearchbarComponent() {
 
@@ -53,47 +16,16 @@ export default function SearchbarComponent() {
 
   const [data, setData] = useState({ items: [] });
 
-  // const [response, setResponse] = useState({
-  //   type: '',
-  //   message: '',
-//asndfljasdhnflja
-  // });
-
-  useEffect( () => {
-    const fetchData = async () => {
-      const api = await axios(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=${formData}`);
-      // const getData = await api.json();
-      console.log("apiData", api.data)
-      console.log("apiDataItems", api.data.items)
-      // console.log("2getData", getData.items.cacheId)
-      // const safeData = await getData.items.map(data => data.title);
-      // console.log("safeData: ", safeData)
-      // console.log("get DATA", getData.items)
-      // console.log("map", data.items.map(data => data.cacheId))
-     
-      setData(api.data);
-    };
-    fetchData();
-  }, []);
-
-  // console.log("data", data)
-
-  // async function getData() {
-  //   const api = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=${formData}`);
-  //   const result = await fetch(api);
-  //   const getResult = await result.json();
-  //   setFormData(getResult);
-  //   console.log(getResult)
-  //   }
-
-  const handleSubmit = async event => {
+  const handleSubmit = (event) => {
     event.preventDefault()
-    console.log(formData)
-  }
-
-  // if (data.items) {
-  //   const resp = data.items.map(item => item.cacheId)
-  // }
+    fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=${formData}`)
+    .then(response => response.json())
+    .then(data => {
+        setData(data)
+        console.log(data)
+    })
+    .catch(error => console.error(error))  
+  };
 
   return (
     <SearchbarWrapper>
@@ -108,18 +40,12 @@ export default function SearchbarComponent() {
         <SearchButton>Search</SearchButton>
       </SearchWrapper>
       <ul>
-        <li color="white"></li>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
+        {typeof data.items !== "undefined" && data.items.map(item => (
+          <li key={item.id}>
+            <p>{item.title}</p>
+          </li>
+        ))}
       </ul>
-      <ul>
-      {typeof data.items !== "undefined" && data.items.map(item => (
-        <li key={item.cacheId}>
-          <p>{item.title}</p>
-        </li>
-      ))}
-    </ul>
     </SearchbarWrapper>
   )
 };

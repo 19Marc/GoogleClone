@@ -56,6 +56,7 @@ export default function SearchbarComponent() {
   // const [response, setResponse] = useState({
   //   type: '',
   //   message: '',
+//asndfljasdhnflja
   // });
 
   useEffect( () => {

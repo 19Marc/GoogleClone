@@ -63,11 +63,12 @@ export default function SearchbarComponent() {
       const api = await axios(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=${formData}`);
       // const getData = await api.json();
       console.log("apiData", api.data)
+      console.log("apiDataItems", api.data.items)
       // console.log("2getData", getData.items.cacheId)
       // const safeData = await getData.items.map(data => data.title);
       // console.log("safeData: ", safeData)
       // console.log("get DATA", getData.items)
-      // console.log("map", getData.items.map(data => data.cacheId))
+      // console.log("map", data.items.map(data => data.cacheId))
      
       setData(api.data);
     };
@@ -86,16 +87,12 @@ export default function SearchbarComponent() {
 
   const handleSubmit = async event => {
     event.preventDefault()
-    // console.log(event.target.name)
-    // console.log(event.target.value)
-    // .then(response => response.json())
-    // .then
-    // console.log(formData)
-  
-
-
+    console.log(formData)
   }
 
+  // if (data.items) {
+  //   const resp = data.items.map(item => item.cacheId)
+  // }
 
   return (
     <SearchbarWrapper>
@@ -115,13 +112,13 @@ export default function SearchbarComponent() {
         <li>1</li>
         <li>1</li>
       </ul>
-      {/* <ul>
-        {data.items.map(item => (
-          <li key={item.cacheId}>
-            <p>{item.title}</p>
-          </li>
-        ))}
-      </ul> */}
+      <ul>
+      {typeof data.items !== "undefined" && data.items.map(item => (
+        <li key={item.cacheId}>
+          <p>{item.title}</p>
+        </li>
+      ))}
+    </ul>
     </SearchbarWrapper>
   )
 };

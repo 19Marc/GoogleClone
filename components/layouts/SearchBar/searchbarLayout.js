@@ -40,36 +40,35 @@ const useDataApi = (initialUrl, initialData) => {
     data: initialData,
   });
  
-
-  // const [data, setData] = useState(initialData);
-
-  // const [url, setUrl] = useState(initialUrl);
-
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [isError, setIsError] = useState(false);
-
   useEffect(() => {
+    let didCancel = false;
+ 
     const fetchData = async () => {
-      const fetchData = async () => {
-        dispatch({ type: 'FETCH_INIT' });
-   
-        try {
-          const result = await axios(url);
-   
+      dispatch({ type: 'FETCH_INIT' });
+ 
+      try {
+        const result = await axios(url);
+ 
+        if (!didCancel) {
           dispatch({ type: 'FETCH_SUCCESS', payload: result.data });
-        } catch (error) {
+        }
+      } catch (error) {
+        if (!didCancel) {
           dispatch({ type: 'FETCH_FAILURE' });
         }
-      };
-   
+      }
     };
-  
+ 
     fetchData();
+ 
+    return () => {
+      didCancel = true;
+    };
   }, [url]);
-  
+ 
   return [state, setUrl];
+};
 
-}
 
 
 export default function SearchBar() {
@@ -155,3 +154,11 @@ export default function SearchBar() {
   //   })
   //   .catch(error => console.error(error))  
   // };
+
+
+    // const [data, setData] = useState(initialData);
+
+  // const [url, setUrl] = useState(initialUrl);
+
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [isError, setIsError] = useState(false);

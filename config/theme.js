@@ -19,12 +19,14 @@ const theme = {
   fontColor: {
     white: '#fff',
     blue: 'blue',
+    black: '#000',
   },
   lineHeight: {
     lhSmall0: '.1rem',
     lhSmall1: '.75rem',
     lhMiddle0: '1rem',
     lhMiddle1: '1.75rem',
+    lhMiddle2: '2rem',
     lhBig: '3rem',
   },
   color: {

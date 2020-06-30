@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 // import { getServerSideProps } from 'next'
 
-import { SearchbarWrapper, SearchbarInput, SearchWrapper, InputWrapper, SearchButton, TextWrapper, GoogleImage, SafedHours, SearchList, SearchResult } from './styles'
+import { SearchbarWrapper, SearchbarInput, SearchWrapper, InputWrapper, SearchButton, TextWrapper, GoogleImage, SafedHours, SearchList, SearchResult } from './styles';
+import List, { UL, LI, LIP, LIH3, LIA } from '../../list/styles';
 
 
 
@@ -10,11 +11,12 @@ import { SearchbarWrapper, SearchbarInput, SearchWrapper, InputWrapper, SearchBu
 // const GoogleKey = "003843309577069876842:stoc1spwaxe&q";
 // query = ""
 
-export default function SearchbarComponent() {
+export default function SearchBar() {
 
   const [formData, setFormData] = useState ('');
 
   const [data, setData] = useState({ items: [] });
+  
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -29,6 +31,15 @@ export default function SearchbarComponent() {
     .catch(error => console.error(error))  
   };
 
+
+
+//   <ul>
+//   {data.hits.map(item => (
+//     <li key={item.objectID}>
+//       <a href={item.url}>{item.title}</a>
+//     </li>
+//   ))}
+// </ul>
   return (
     <SearchbarWrapper>
       <SearchWrapper>
@@ -41,16 +52,16 @@ export default function SearchbarComponent() {
         </InputWrapper>
         <SearchButton>Search</SearchButton>
       </SearchWrapper>
-      <SearchResult>
+      <UL>
         {typeof data.items !== "undefined" && data.items.map(item => (
-          <SearchList key={item.cacheId}>
-            <p>{item.title}</p>
-            <a href={item.link}>{item.link}</a>
-            <p>{item.snippet}</p>
+          <LI key={item.cacheId}>
+            <LIP>{item.title}</LIP>
+            <LIA href={item.link}>{item.link}</LIA>
+            <LIP>{item.snippet}</LIP>
             {/* <img href={item.svg.pagemap.cse_thumbnail}></img> */}
-          </SearchList>
+          </LI>
         ))}
-      </SearchResult>
+      </UL>
     </SearchbarWrapper>
   )
 };

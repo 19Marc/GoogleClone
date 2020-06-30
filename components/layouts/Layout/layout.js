@@ -1,6 +1,6 @@
 import { LayoutWrapper } from './styles'
 
-export default function LayoutComponent({
+export default function Layout({
   children,
 }) {
   return (

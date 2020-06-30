@@ -1,6 +1,6 @@
 import { HeaderWrapper, Headline, Description } from './styles'
 
-export default function HeaderComponent({
+export default function Header({
 textUrl = "https://nextjs.org",
 }) {
   return (

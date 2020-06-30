@@ -1,6 +1,6 @@
 import { HomeWrapper } from './styles'
 
-export default function HomeComponent({
+export default function HomeLayout({
   children,
 }) {
   return (

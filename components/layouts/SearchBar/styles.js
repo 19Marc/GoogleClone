@@ -53,7 +53,7 @@ export const SearchbarInput = styled.input`
   }
 `
 
-export const SearchButton = styled.div `
+export const SearchButton = styled.button `
   display: flex;
   justify-content: center;
   background-color: white;

@@ -1,9 +1,14 @@
+
+import React, {useContext} from 'react';
+// import {Provider} from 'react-redux';
 import { ThemeProvider } from 'styled-components';
+
+import Head from 'next/head'
+
+import Store from '../store/newStore'
 
 import GlobalStyles from '../config/globalStyles'
 import theme from '../config/theme'
-
-import Head from 'next/head'
 
 // import * as theme from 'config/theme'
 import Layout from '../components/layouts/Layout/layout'
@@ -17,25 +22,27 @@ import SearchBar from '../components/layouts/SearchBar/searchbarLayout'
 
 export default function Home() {
   return (
-    <ThemeProvider theme={theme}>
-      <div> 
-        <Head>
-        <title>GoogleClone</title>
-        <link rel="icon" href="/favicon.ico" />
-        </Head>
+    <Store>
+      <ThemeProvider theme={theme}>
+        <div> 
+          <Head>
+          <title>GoogleClone</title>
+          <link rel="icon" href="/favicon.ico" />
+          </Head>
 
-        <Layout>
-        <GlobalStyles />
-          <HomeWrapper>
-            <Header />
+          <Layout>
+          <GlobalStyles />
+            <HomeWrapper>
+              <Header />
 
-            <SearchBar />
+              <SearchBar />
 
-            <Footer /> 
+              <Footer /> 
 
-          </HomeWrapper>
-        </Layout>
-      </div> 
-    </ThemeProvider>
+            </HomeWrapper>
+          </Layout>
+        </div> 
+      </ThemeProvider>
+    </Store>
   )
 }

@@ -1,14 +1,15 @@
 import React, { useState, useEffect, useReducer, useContext} from 'react';
-import { Context } from '../newStore'
+import { Context }  from '../store'
 import axios from 'axios';
 
-import dataFetchReducer from '../reducers/dataFetchReducer'
+import reducer from '../reducers/dataFetchReducer'
 
-const useDataApi = (initialUrl, initialData) => {
-  const [url, setUrl] = useState(initialUrl);
- 
+
+
+const useDataApi = () => {
   const [state, dispatch] = useContext(Context)
- 
+  const [url, setUrl] = useState("");
+
   useEffect(() => {
     let didCancel = false;
  
@@ -32,10 +33,17 @@ const useDataApi = (initialUrl, initialData) => {
  
     return () => {
       didCancel = true;
-    };
+    }
   }, [url]);
- 
+
   return [state, setUrl];
 };
 
 export default useDataApi ;
+
+
+// (
+//   <Context.Provider value={{ fetchData, state }}>
+//   {props.children}
+//   </Context.Provider>
+// );

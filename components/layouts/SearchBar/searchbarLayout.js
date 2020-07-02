@@ -23,12 +23,18 @@ export default function SearchBar() {
   return (
     <SearchbarWrapper>
       <SearchWrapper>
-        <InputWrapper id="form" onSubmit={ event => {
-          doFetch( `https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=${query}`);
+        <InputWrapper
+          id="form"
+          onSubmit={ event => {doFetch( `https://www.googleapis.com/customsearch/v1?key=AIzaSyAaLsnvAyqBWIVjMBOzw0DEQADgvPa0xwc&cx=003843309577069876842:stoc1spwaxe&q=${query}`);
 
           event.preventDefault();
         }}>
-          <SearchbarInput type="text" placeholder="Type your search" value={query} required onChange={event => setQuery(event.target.value)}/>
+          <SearchbarInput
+            type="text"
+            placeholder="Type your search"
+            value={query} 
+            required onChange={event => setQuery(event.target.value)}
+          />
           <TextWrapper>
             <GoogleImage>Google</GoogleImage>
             <SafedHours>xxx Watt hours safed</SafedHours>

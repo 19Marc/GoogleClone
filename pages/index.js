@@ -1,11 +1,11 @@
 
-import React, {useContext} from 'react';
+import React, {useContext, useState} from 'react';
 // import {Provider} from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 
 import Head from 'next/head'
 
-import Store from '../store/newStore'
+import StateProvider, { Context } from '../store/store'
 
 import GlobalStyles from '../config/globalStyles'
 import theme from '../config/theme'
@@ -21,8 +21,9 @@ import SearchBar from '../components/layouts/SearchBar/searchbarLayout'
 // Start Sideproject Googleclonex
 
 export default function Home() {
+
   return (
-    <Store>
+    <StateProvider>
       <ThemeProvider theme={theme}>
         <div> 
           <Head>
@@ -38,11 +39,11 @@ export default function Home() {
               <SearchBar />
 
               <Footer /> 
-
+    
             </HomeWrapper>
           </Layout>
         </div> 
       </ThemeProvider>
-    </Store>
+    </StateProvider>
   )
 }

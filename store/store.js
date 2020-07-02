@@ -1,6 +1,28 @@
-import {createStore} from 'redux';
-import rootReducer from './reducers/rootReducer';
+import React, {createContext, useReducer, useContext} from 'react'
+import reducer from './reducers/dataFetchReducer'
 
-const store = createStore(rootReducer);
+const initialState = {
+  isLoading: false,
+  isError: false,
+  data: "",
+}
 
-export default store
+// const store = createContext();
+// const { Provider } = store;
+
+const StateProvider = ({children}) => {
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  // const [url, setUrl] = useState(initialUrl);
+  return (
+    <Context.Provider value={[state, dispatch]}>
+      {children}
+    </Context.Provider>
+  )
+}
+
+export const Context = createContext(initialState);
+
+export default StateProvider;
+

@@ -1,0 +1,17 @@
+// const useSignUpForm = (callback) => {
+//   const [inputs, setInputs] = useState({});
+//   const handleSubmit = (event) => {
+//     if (event) {
+//       event.preventDefault();
+//     }
+//   }
+//   const handleOnChange = (event) => {
+//     event.persist();
+//     setInputs(inputs => ({...inputs, [event.target.name]: event.target.value}));
+//   }
+//   return {
+//     handleSubmit,
+//     handleInputChange,
+//     inputs
+//   };
+// }

@@ -19,6 +19,7 @@ export default function SearchBar() {
     { items: [] },
   );
 
+  console.log("Searchbar data", data)
 
   return (
     <SearchbarWrapper>

@@ -23,7 +23,7 @@ import SearchBar from '../components/layouts/SearchBar/searchbarLayout'
 export default function Home() {
 
   return (
-    <StateProvider>
+    <StateProvider.Provider>
       <ThemeProvider theme={theme}>
         <div> 
           <Head>
@@ -38,12 +38,23 @@ export default function Home() {
 
               <SearchBar />
 
-              <Footer /> 
-    
+              <Footer />
+              <Context>
+              <ul>
+                {data.items.map(item => (
+                  <LI key={item.cacheId}>
+                    <LIP>{item.title}</LIP>
+                    <LIA href={item.link}>{item.link}</LIA>
+                  </LI>
+                ))}
+                </ul>
+              </Context>
             </HomeWrapper>
+
           </Layout>
         </div> 
       </ThemeProvider>
-    </StateProvider>
+    </StateProvider.Provider>
   )
 }
+

@@ -39,7 +39,7 @@ export default function Home() {
               <SearchBar />
 
               <Footer />
-              <Context>
+              <Context value={[state, dispatch]}>
               <ul>
                 {data.items.map(item => (
                   <LI key={item.cacheId}>
